@@ -1,0 +1,24 @@
+{
+  "name": "anviz",
+  "version": "1.0.0",
+  "description": "重构 anviz 网站。页面使用 bootstrap + Handlebars.js + SCSS布局，数据库采用 mongoDB + express，node.js 搭建的环境，替代原 php 环境。",
+  "main": "index.js",
+  "scripts": {
+    "server": "node index.js",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/old-boy/anviz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/old-boy/anviz/issues"
+  },
+  "homepage": "https://github.com/old-boy/anviz#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0"
+  }
+}
