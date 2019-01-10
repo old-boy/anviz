@@ -2,11 +2,13 @@ const express = require('express');
 const exphbs  = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const path = require('path');
+const juery = require('jquery');
 
 const db = require('./config/key').mongoURI;
 
 const app = express();
-const port = 8000;
+const port = 3000;
 
 mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
 
@@ -18,6 +20,8 @@ app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({extended:false}))  
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'public'))); //从 public 中获取静态文件
+
 
 
 //router

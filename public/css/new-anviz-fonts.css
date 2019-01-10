@@ -1,0 +1,912 @@
+@font-face {
+  font-family: 'icon';
+  src:  url('../font/icon/icon.eot?ikx76m');
+  src:  url('../font/icon/icon.eot?ikx76m#iefix') format('embedded-opentype'),
+    url('../font/icon/icon.ttf?ikx76m') format('truetype'),
+    url('../font/icon/icon.woff?ikx76m') format('woff'),
+    url('../font/icon/icon.svg?ikx76m#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Omnes';
+	src: url('../font/omnes/Omnes.eot');
+	src: local('☺'), url('../font/omnes/Omnes.woff') format('woff'), url('../font/omnes/Omnes.ttf') format('truetype'), url('../font/omnes/Omnes.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-onvif:before {
+  content: "\ea47";
+}
+.icon-customer:before {
+  content: "\ea46";
+}
+.icon-client:before {
+  content: "\ea4d";
+}
+.icon-file:before {
+  content: "\ea45";
+}
+.icon-excel:before {
+  content: "\ea3c";
+}
+.icon-word:before {
+  content: "\ea3d";
+}
+.icon-ppt:before {
+  content: "\ea3e";
+}
+.icon-pdf:before {
+  content: "\ea3f";
+}
+.icon-zip:before {
+  content: "\ea40";
+}
+.icon-jpg:before {
+  content: "\ea41";
+}
+.icon-txt:before {
+  content: "\ea42";
+}
+.icon-export:before {
+  content: "\ea43";
+}
+.icon-zoom:before {
+  content: "\ea44";
+}
+
+.icon-loading:before {
+  content: "\ea3b";
+}
+.icon-security-one-work-onsite:before {
+  content: "\e9a6";
+}
+.icon-security-one-security:before {
+  content: "\e9a9";
+}
+.icon-security-one-installation:before {
+  content: "\e9aa";
+}
+.icon-security-one-remote-security:before {
+  content: "\e9ab";
+}
+.icon-security-one-lower-cost:before {
+  content: "\e9ac";
+}
+.icon-security-one-awareness:before {
+  content: "\e9ad";
+}
+.icon-security-one-entrance:before {
+  content: "\e9ae";
+}
+.icon-security-one-perimeter:before {
+  content: "\e9c2";
+}
+.icon-security-one-gate:before {
+  content: "\e9c3";
+}
+.icon-security-one-office:before {
+  content: "\e9c4";
+}
+.icon-security-one-temperature:before {
+  content: "\e9c5";
+}
+.icon-security-one-light:before {
+  content: "\e9c6";
+}
+.icon-security-one-switch:before {
+  content: "\e9c7";
+}
+.icon-security-one-cloud-deployment:before {
+  content: "\e9c8";
+}
+.icon-security-one-map-operation:before {
+  content: "\e9c9";
+}
+.icon-security-one-hardware-cost:before {
+  content: "\e9ca";
+}
+.icon-security-one-client:before {
+  content: "\e9cf";
+}
+.icon-security-one-alarm:before {
+  content: "\ea30";
+}
+.icon-security-one-software-cost:before {
+  content: "\ea31";
+}
+.icon-security-one-maintenance-cost:before {
+  content: "\ea39";
+}
+.icon-security-one-security-guard:before {
+  content: "\ea3a";
+}
+.icon-delete:before {
+  content: "\e9db";
+}
+.icon-warn:before {
+  content: "\e9dc";
+}
+.icon-pointer_line:before {
+  content: "\e902";
+}
+.icon-tm-pointer-big:before {
+  content: "\e903";
+}
+.icon-password:before {
+  content: "\e90f";
+}
+.icon-hot_line:before {
+  content: "\e917";
+}
+.icon-download_line:before {
+  content: "\e919";
+}
+.icon-map_line:before {
+  content: "\e9b0";
+}
+.icon-bad_line:before {
+  content: "\e9b1";
+}
+.icon-good_line:before {
+  content: "\e9b2";
+}
+.icon-attachment_line:before {
+  content: "\e9b3";
+}
+.icon-warning_line:before {
+  content: "\e9b4";
+}
+.icon-smile_line:before {
+  content: "\e9b5";
+}
+.icon-success_line:before {
+  content: "\e9b6";
+}
+.icon-QRCode_line:before {
+  content: "\e9b7";
+}
+.icon-help_line:before {
+  content: "\e9b8";
+}
+.icon-information_line:before {
+  content: "\e9b9";
+}
+.icon-more_line:before {
+  content: "\e9ba";
+}
+.icon-pic_line:before {
+  content: "\e9bb";
+}
+.icon-edit_line:before {
+  content: "\e9bc";
+}
+.icon-cry_line:before {
+  content: "\e9bd";
+}
+.icon-close_line:before {
+  content: "\e9be";
+}
+.icon-cart_line:before {
+  content: "\e9bf";
+}
+.icon-back_line:before {
+  content: "\e9c0";
+}
+.icon-all_line:before {
+  content: "\e9c1";
+}
+.icon-full_screen_line:before {
+  content: "\e900";
+}
+.icon-out_full_screen_line:before {
+  content: "\e901";
+}
+.icon-antenna_larger2:before {
+  content: "\e9dd";
+}
+.icon-antenna:before {
+  content: "\e9de";
+}
+.icon-camera_larger_left_line:before {
+  content: "\e904";
+}
+.icon-camera:before {
+  content: "\e9df";
+}
+.icon-case_study_larger2:before {
+  content: "\e9e0";
+}
+.icon-case_study:before {
+  content: "\e9e1";
+}
+.icon-catalogue_larger2:before {
+  content: "\e9e2";
+}
+.icon-catalogue:before {
+  content: "\e9e3";
+}
+.icon-certificate_larger2:before {
+  content: "\e9e4";
+}
+.icon-certificate:before {
+  content: "\e9e5";
+}
+.icon-controller_larger2:before {
+  content: "\e9e6";
+}
+.icon-controller:before {
+  content: "\e9e7";
+}
+.icon-download_larger2:before {
+  content: "\e9e8";
+}
+.icon-download:before {
+  content: "\e9e9";
+}
+.icon-face_entry_larger2:before {
+  content: "\e9ea";
+}
+.icon-face_entry:before {
+  content: "\e9eb";
+}
+.icon-face_terminal_larger_line:before {
+  content: "\e911";
+}
+.icon-face_terminal:before {
+  content: "\e9ec";
+}
+.icon-faq_larger_line:before {
+  content: "\e912";
+}
+.icon-faq:before {
+  content: "\e9ed";
+}
+.icon-fingerprint_larger_line:before {
+  content: "\e914";
+}
+.icon-fingerprint:before {
+  content: "\e9ee";
+}
+.icon-firmware_larger_line:before {
+  content: "\e916";
+}
+.icon-firmware:before {
+  content: "\e9ef";
+}
+.icon-hardware_larger_line:before {
+  content: "\e918";
+}
+.icon-hardware:before {
+  content: "\e9f0";
+}
+.icon-edk_larger2:before {
+  content: "\e9f1";
+}
+.icon-edk:before {
+  content: "\e9f2";
+}
+.icon-iris_terminal_larger2:before {
+  content: "\e9f3";
+}
+.icon-iris_terminal:before {
+  content: "\e9f4";
+}
+.icon-iris_usb_scanner_larger2:before {
+  content: "\e9f5";
+}
+.icon-iris_usb_scanner:before {
+  content: "\e9f6";
+}
+.icon-manual_larger2:before {
+  content: "\e9f7";
+}
+.icon-manual:before {
+  content: "\e9f8";
+}
+.icon-moudles_larger2:before {
+  content: "\e9f9";
+}
+.icon-moudles:before {
+  content: "\e9fa";
+}
+.icon-online_service_larger2:before {
+  content: "\e9fb";
+}
+.icon-online_service:before {
+  content: "\e9fc";
+}
+.icon-reader_largery2:before {
+  content: "\e9fd";
+}
+.icon-reader:before {
+  content: "\e9fe";
+}
+.icon-recoder_larger2:before {
+  content: "\e9ff";
+}
+.icon-recoder:before {
+  content: "\ea00";
+}
+.icon-remote_desktop_support_larger2:before {
+  content: "\ea01";
+}
+.icon-remote_desktop_support:before {
+  content: "\ea02";
+}
+.icon-sdk_larger_line:before {
+  content: "\e936";
+}
+.icon-sdk:before {
+  content: "\ea03";
+}
+.icon-smart_lock_larger2:before {
+  content: "\ea04";
+}
+.icon-smart_lock:before {
+  content: "\ea05";
+}
+.icon-software_larger2:before {
+  content: "\ea06";
+}
+.icon-software:before {
+  content: "\ea07";
+}
+.icon-tag_larger2:before {
+  content: "\ea08";
+}
+.icon-tag:before {
+  content: "\ea09";
+}
+.icon-training_larger2:before {
+  content: "\ea0a";
+}
+.icon-training:before {
+  content: "\ea0b";
+}
+.icon-trouble_ticket_largery_line:before {
+  content: "\e938";
+}
+.icon-trouble_ticket:before {
+  content: "\ea0c";
+}
+.icon-video_larger_line:before {
+  content: "\e93a";
+}
+.icon-video:before {
+  content: "\ea0d";
+}
+.icon-warranty_larger_line:before {
+  content: "\e93c";
+}
+.icon-warranty:before {
+  content: "\ea0e";
+}
+.icon-access_control_larger_line:before {
+  content: "\e9af";
+}
+.icon-access_control:before {
+  content: "\ea0f";
+}
+.icon-biometric_larger2:before {
+  content: "\ea10";
+}
+.icon-biometric:before {
+  content: "\ea11";
+}
+.icon-facial_larger2:before {
+  content: "\ea12";
+}
+.icon-facial:before {
+  content: "\ea13";
+}
+.icon-rfid_larger2:before {
+  content: "\ea14";
+}
+.icon-rfid:before {
+  content: "\ea15";
+}
+.icon-surveillance_larger2:before {
+  content: "\ea16";
+}
+.icon-surveillance:before {
+  content: "\ea17";
+}
+.icon-time_attendance_larger2:before {
+  content: "\ea18";
+}
+.icon-time_attendance:before {
+  content: "\ea19";
+}
+.icon-communicate:before {
+  content: "\ea1a";
+}
+.icon-search:before {
+  content: "\ea1b";
+}
+.icon-account:before {
+  content: "\ea1c";
+}
+.icon-anviz_logo_R2:before {
+  content: "\ea1d";
+}
+.icon-anviz_logo2:before {
+  content: "\ea1e";
+}
+.icon-sercurityone:before {
+  content: "\ea1f";
+}
+.icon-crosschex2:before {
+  content: "\ea20";
+}
+.icon-intellisight:before {
+  content: "\ea21";
+}
+.icon-solved_line:before {
+  content: "\e913";
+}
+.icon-news_line:before {
+  content: "\e915";
+}
+.icon-anzhuo_line:before {
+  content: "\e90b";
+}
+.icon-apple_line:before {
+  content: "\e909";
+}
+.icon-erweima_line:before {
+  content: "\e90d";
+}
+.icon-antenna_larger:before {
+  content: "\e905";
+}
+.icon-camera_larger:before {
+  content: "\e906";
+}
+.icon-case_study_larger:before {
+  content: "\e907";
+}
+.icon-catalogue_larger:before {
+  content: "\e908";
+}
+.icon-certificate_larger:before {
+  content: "\e90a";
+}
+.icon-controller_larger:before {
+  content: "\e90c";
+}
+.icon-download_larger:before {
+  content: "\e90e";
+}
+.icon-face_entry_larger:before {
+  content: "\e910";
+}
+.icon-face_terminal_larger:before {
+  content: "\e91a";
+}
+.icon-edk_larger:before {
+  content: "\e91b";
+}
+.icon-iris_terminal_larger:before {
+  content: "\e91c";
+}
+.icon-iris_usb_scanner_larger:before {
+  content: "\e91e";
+}
+.icon-manual_larger:before {
+  content: "\e920";
+}
+.icon-moudles_larger:before {
+  content: "\e922";
+}
+.icon-online_service_larger:before {
+  content: "\e924";
+}
+.icon-reader_largery:before {
+  content: "\e926";
+}
+.icon-recoder_larger:before {
+  content: "\e928";
+}
+.icon-remote_desktop_support_larger:before {
+  content: "\e92a";
+}
+.icon-sdk_larger:before {
+  content: "\e92c";
+}
+.icon-smart_lock_larger:before {
+  content: "\e92e";
+}
+.icon-software_larger:before {
+  content: "\e930";
+}
+.icon-tag_larger:before {
+  content: "\e932";
+}
+.icon-training_larger:before {
+  content: "\e934";
+}
+.icon-biometric_larger:before {
+  content: "\e93e";
+}
+.icon-facial_larger:before {
+  content: "\e940";
+}
+.icon-rfid_larger:before {
+  content: "\e942";
+}
+.icon-surveillance_larger:before {
+  content: "\e944";
+}
+.icon-time_attendance_larger:before {
+  content: "\e946";
+}
+.icon-communicate_line:before {
+  content: "\e948";
+}
+.icon-search_line:before {
+  content: "\e949";
+}
+.icon-anviz_logo_R:before {
+  content: "\e94b";
+}
+.icon-anviz_logo:before {
+  content: "\e94c";
+}
+.icon-sercurityone_line:before {
+  content: "\e94d";
+}
+.icon-crosschex:before {
+  content: "\e94e";
+}
+.icon-intellisight_line:before {
+  content: "\e94f";
+}
+.icon-32_tft:before {
+  content: "\e95a";
+}
+.icon-time_group:before {
+  content: "\e959";
+}
+.icon-anti_pass_back:before {
+  content: "\e958";
+}
+.icon-ram_line:before {
+  content: "\e957";
+}
+.icon-tcp_ip:before {
+  content: "\e91d";
+}
+.icon-5inch_lcd:before {
+  content: "\e91f";
+}
+.icon-a_control:before {
+  content: "\e921";
+}
+.icon-bluetooth_line:before {
+  content: "\e923";
+}
+.icon-camera_line:before {
+  content: "\e925";
+}
+.icon-corridor_fomat:before {
+  content: "\e965";
+}
+.icon-database_server:before {
+  content: "\e966";
+}
+.icon-day_night:before {
+  content: "\e967";
+}
+.icon-daylight_saving:before {
+  content: "\e968";
+}
+.icon-email_line:before {
+  content: "\e969";
+}
+.icon-h264_jpeg:before {
+  content: "\e96a";
+}
+.icon-image_analysis:before {
+  content: "\e96b";
+}
+.icon-ip65_line:before {
+  content: "\e96c";
+}
+.icon-message_line:before {
+  content: "\e96d";
+}
+.icon-multiple_input_output:before {
+  content: "\e927";
+}
+.icon-rfid_card:before {
+  content: "\e929";
+}
+.icon-sd_card:before {
+  content: "\e92b";
+}
+.icon-smart_ir:before {
+  content: "\e92d";
+}
+.icon-touch_keypad:before {
+  content: "\e92f";
+}
+.icon-wdr_line:before {
+  content: "\e931";
+}
+.icon-g_line:before {
+  content: "\e933";
+}
+.icon-afos_line:before {
+  content: "\e935";
+}
+.icon-alarm_line:before {
+  content: "\e937";
+}
+.icon-atx_line:before {
+  content: "\e96e";
+}
+.icon-audio_line:before {
+  content: "\e96f";
+}
+.icon-backup_key:before {
+  content: "\e970";
+}
+.icon-battery_line:before {
+  content: "\e971";
+}
+.icon-battery_times:before {
+  content: "\e972";
+}
+.icon-bell_line:before {
+  content: "\e973";
+}
+.icon-big_viewing_angle:before {
+  content: "\e974";
+}
+.icon-biometric_line:before {
+  content: "\e975";
+}
+.icon-card_reader:before {
+  content: "\e976";
+}
+.icon-card_line:before {
+  content: "\e939";
+}
+.icon-cpu_line:before {
+  content: "\e93b";
+}
+.icon-crosschex_lite:before {
+  content: "\e93d";
+}
+.icon-crosschex_line:before {
+  content: "\e93f";
+}
+.icon-door_sensor:before {
+  content: "\e941";
+}
+.icon-door_line:before {
+  content: "\e943";
+}
+.icon-dual_camera:before {
+  content: "\e945";
+}
+.icon-dual_display:before {
+  content: "\e947";
+}
+.icon-emergency_battery:before {
+  content: "\e94a";
+}
+.icon-finger_line:before {
+  content: "\e977";
+}
+.icon-full_hd_line:before {
+  content: "\e978";
+}
+.icon-full_hd:before {
+  content: "\e979";
+}
+.icon-gprs_line:before {
+  content: "\e97a";
+}
+.icon-handle_line:before {
+  content: "\e97b";
+}
+.icon-hd_color:before {
+  content: "\e97c";
+}
+.icon-ik10_line:before {
+  content: "\e97d";
+}
+.icon-internal_webserver:before {
+  content: "\e97e";
+}
+.icon-less_than_half_second:before {
+  content: "\e97f";
+}
+.icon-linux_sys:before {
+  content: "\e950";
+}
+.icon-mini_usb:before {
+  content: "\e951";
+}
+.icon-mobile_management:before {
+  content: "\e952";
+}
+.icon-motion_line:before {
+  content: "\e953";
+}
+.icon-multiple_language:before {
+  content: "\e954";
+}
+.icon-network_line:before {
+  content: "\e955";
+}
+.icon-oled_line:before {
+  content: "\e956";
+}
+.icon-password_line:before {
+  content: "\e95b";
+}
+.icon-poe_line:before {
+  content: "\e95c";
+}
+.icon-print_line:before {
+  content: "\e980";
+}
+.icon-ptz_line:before {
+  content: "\e981";
+}
+.icon-push_line:before {
+  content: "\e982";
+}
+.icon-realtime_snapshot:before {
+  content: "\e983";
+}
+.icon-record_capacity:before {
+  content: "\e984";
+}
+.icon-relay_line:before {
+  content: "\e985";
+}
+.icon-remote_door_control:before {
+  content: "\e986";
+}
+.icon-rs485_line:before {
+  content: "\e987";
+}
+.icon-slim_line:before {
+  content: "\e988";
+}
+.icon-smart_led_line:before {
+  content: "\e95d";
+}
+.icon-touch_line:before {
+  content: "\e95e";
+}
+.icon-usb_line:before {
+  content: "\e95f";
+}
+.icon-vandal_resistant:before {
+  content: "\e960";
+}
+.icon-voice_line:before {
+  content: "\e961";
+}
+.icon-webserver_line:before {
+  content: "\e962";
+}
+.icon-wiegand_line:before {
+  content: "\e963";
+}
+.icon-wifi_wps:before {
+  content: "\e964";
+}
+.icon-wifi_line:before {
+  content: "\e989";
+}
+.icon-solution_line:before {
+  content: "\e98a";
+}
+.icon-report_download:before {
+  content: "\e98b";
+}
+.icon-organizational_structure:before {
+  content: "\e98c";
+}
+.icon-buy_line:before {
+  content: "\e98d";
+}
+.icon-authority_management:before {
+  content: "\e98e";
+}
+.icon-attendancea_statistics:before {
+  content: "\e98f";
+}
+.icon-earth_line:before {
+  content: "\e990";
+}
+.icon-sina_line:before {
+  content: "\e991";
+}
+.icon-wechat_line:before {
+  content: "\e992";
+}
+.icon-twitter_line:before {
+  content: "\e993";
+}
+.icon-facebook_line:before {
+  content: "\e994";
+}
+.icon-google_plus:before {
+  content: "\e995";
+}
+.icon-youtobe_line:before {
+  content: "\e996";
+}
+.icon-equipment_line:before {
+  content: "\e997";
+}
+.icon-frame_line:before {
+  content: "\e998";
+}
+.icon-report_line:before {
+  content: "\e999";
+}
+.icon-scheduling_line:before {
+  content: "\e99a";
+}
+.icon-bread_line:before {
+  content: "\e99b";
+}
+.icon-cloud_line:before {
+  content: "\e99c";
+}
+.icon-coffee-house_line:before {
+  content: "\e99d";
+}
+.icon-convenience_store:before {
+  content: "\e99e";
+}
+.icon-customized_line:before {
+  content: "\e99f";
+}
+.icon-fast_food:before {
+  content: "\e9a0";
+}
+.icon-fingerprint_line:before {
+  content: "\e9a1";
+}
+.icon-gas-station_line:before {
+  content: "\e9a2";
+}
+.icon-quick-hand_line:before {
+  content: "\e9a3";
+}
+.icon-user_line:before {
+  content: "\e9a4";
+}
+.icon-work_time:before {
+  content: "\e9a5";
+}
+
+
