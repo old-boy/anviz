@@ -3,7 +3,10 @@ const exphbs  = require('express-handlebars');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
-const juery = require('jquery');
+// const jsdom = require("jsdom");
+// const { JSDOM } = jsdom;
+// const { window } = new JSDOM(`<!DOCTYPE html>`);
+// const $ = require('jQuery')(window);
 
 const db = require('./config/key').mongoURI;
 
@@ -21,19 +24,18 @@ app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({extended:false}))  
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public'))); //从 public 中获取静态文件
+// app.use($);
 
 
 
 //router
-app.get('/',(req,res) => {
-    const title = '这里可以传参';
-    res.render('index',{
-        title:title
-    })
-});
-app.get('/about',(req,res) => {
-    res.render('about')
-});
+const homeRouter = require('./router/home');
+const aboutRouter = require('./router/about');
+
+app.use(homeRouter);
+app.use(aboutRouter)
+
+
 
 
 app.listen(port,() => {
