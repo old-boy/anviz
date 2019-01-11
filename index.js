@@ -29,9 +29,11 @@ app.use(express.static(path.join(__dirname, 'public'))); //从 public 中获取�
 //router
 const homeRouter = require('./router/home');
 const aboutRouter = require('./router/about');
+const redirectRouter = require('./router/redirect');
 
 app.use(homeRouter);
 app.use(aboutRouter)
+app.use(redirectRouter);
 
 
 

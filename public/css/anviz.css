@@ -1051,7 +1051,7 @@ body .banner-top-index-warp .banner-home-right .ps7-info .webkit {
   background: #0099cc;
 }
 .carousel-warp .swiper-container .swiper-button-next {
-  background-image: url(../../img/home/banner/next_icon.png);
+  background-image: url(/images/index/next_icon.png);
   left: auto;
   bottom: 58%;
   right: 10px;
@@ -1072,7 +1072,7 @@ body .banner-top-index-warp .banner-home-right .ps7-info .webkit {
   }
 }
 .carousel-warp .swiper-container .swiper-button-prev {
-  background-image: url(../../img/home/banner/prev_icon.png);
+  background-image: url(/images/index/prev_icon.png);
   left: auto;
   bottom: 58%;
   left: 10px;

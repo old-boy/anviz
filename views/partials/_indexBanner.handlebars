@@ -1,0 +1,70 @@
+<div id="homeBanner">
+   <div id="homeBanner">
+        <div class="W2-bg">
+            <div class="banner-info">
+                <div class="box">
+                    <h2>THE GLOBAL LEADING</h2>
+                    <p>PROVIDER OF INTELLIGENT SECURITY</p>
+                        <br>
+                    <img src="/images/index/tb.png"></div>
+
+                    <div class="pro"><img src="/images/index/product.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+.W2-bg {
+    height: 600px;
+    background: url('/images/index/bg2.jpg') center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: relative;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 57px 0 0;
+}
+.banner-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1400px;
+    margin: auto;
+}
+.banner-info .box{
+    flex: 1 auto;
+    padding: 1em;
+}
+.banner-info .pro{
+    flex: 2 auto;
+    padding: 15px;
+}
+.banner-info .pro img{
+    max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .W2-bg{
+        min-height: 420px;
+        font-size: 18px;
+    }
+    .W2-bg .banner-info .box{
+        width: 100%;
+        font-size: 16px;
+        text-align:center;
+    }
+    .banner-info .box img{
+    max-width:80vw;
+    }
+    body #homeBanner {
+        max-height:none;
+    }
+    .banner-info{
+    flex-wrap:wrap;
+    }
+}
+</style>
