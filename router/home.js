@@ -5,9 +5,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const HomeSchema = require('../models/HomeSchema');
 
-/** GET /
- *  首页
-*/
 router.get('/',(req,res) => {
     const title = '这里可以传参';
     res.render('index',{

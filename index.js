@@ -10,6 +10,18 @@ const db = require('./config/key').mongoURI;
 const app = express();
 const port = 3000;
 
+
+//router
+const homeRouter = require('./router/home');
+const productRouter = require('./router/product');
+const aboutRouter = require('./router/about');
+const solutionRouter = require('./router/solution');
+const supportRouter = require('./router/support');
+const partnerRouter = require('./router/partner');
+const whereToBuyRouter = require('./router/whereToBuy');
+const industryRouter = require('./router/industry');
+const newsRouter = require('./router/news');
+
 //connect db
 mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
 
@@ -24,19 +36,15 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public'))); //从 public 中获取静态文件
 
 
-
-
-//router
-const homeRouter = require('./router/home');
-const aboutRouter = require('./router/about');
-const redirectRouter = require('./router/redirect');
-
-app.use(homeRouter);
-app.use(aboutRouter)
-app.use(redirectRouter);
-
-
-
+app.use(homeRouter)
+app.use('/product',productRouter)
+app.use('/about',aboutRouter)
+app.use('/solution',solutionRouter)
+app.use('/support',supportRouter)
+app.use('/partner',partnerRouter)
+app.use('/wheretobuy',whereToBuyRouter)
+app.use('/industry',industryRouter)
+app.use('/news',newsRouter)
 
 app.listen(port,() => {
     console.log(`Server started on ${port}`)
