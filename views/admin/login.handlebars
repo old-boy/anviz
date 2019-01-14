@@ -1,0 +1,44 @@
+<!--nav bg-->
+<div class="banner-top-login-bg"></div>
+<div class="container">
+    <div class="login-main">
+        <div class="row ">
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 ">
+                <h1>MyAnviz Login</h1>
+            </div>
+        </div>
+        <div class="row login-warp">
+            <form action="<?php echo Yii::app()->createUrl('login/check'); ?>" method="post" id="LoginFormWin"
+                  class="form-verify col-md-6 col-xs-12 col-sm-12">
+                <input type="hidden" name="return_url" value="<?php echo $return_url;?>" />
+                <div class="form-group">
+                    <label for="email">Username</label>
+                    <input type="email" class="input-box form-control" name="email" placeholder="User Name / Email">
+                </div>
+                <div class="form-group">
+                    <label for="password ">Password</label>
+                    <input type="password" class="input-box form-control" name="password" placeholder="Password ">
+                </div>
+                <div class="form-group">
+                    <a href="" data-ajax="true" data-ajax-target="#containerBody" data-ajax-progressing="top" class="forgot">Forgot password?</a>
+                </div>
+                <div class="form-group input-wrapper">
+                    <input class="anviz-btn-primary RegSubmit" type="submit" value="Login">
+                    <input type="hidden" name="type" value="" class="type">
+                </div>
+            </form>
+            <div class="register-wrap col-md-6 col-xs-12 col-sm-12">
+                <h2 class="register-title">
+                    <i class="icon-user_line"></i>
+                    New User?
+                </h2>
+                <p>
+                    Register new MyAnviz account for Own your Anviz Portal to take
+                    advantage of software, firmware, newsletters and other personalized Anviz services for great
+                    benefits.
+                </p>
+                <a href="" class="anviz-btn-primary register-btn" data-ajax="true" data-ajax-target="#containerBody" data-ajax-progressing="top">Register</a>
+            </div>
+        </div>
+    </div>
+</div>

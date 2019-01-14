@@ -1,0 +1,34 @@
+<div class="banner-top-login-bg"></div>
+<div class="container">
+    <div class="register-main">
+        <div class="row register-title">
+            <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 ">
+                <h1>Forgot password</h1>
+                <p>Please enter your email address and then you will receive an email to reset your password.</p>
+            </div>
+        </div>
+        <div class="row register-warp">
+            <form action="<?php echo Yii::app()->createUrl('forgot/check'); ?>" class="form-verify" method="post"
+                  id="ForgotFormWin">
+                <div class="register-left col-md-6 col-xs-12 col-sm-12">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" class="input-box form-control" name="email" placeholder="User Name / Email">
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12 col-sm-12">
+                    <div class="form-group">
+                        <a href="" data-ajax="true"
+                           data-ajax-target="#containerBody" data-ajax-progressing="top" class="forgot">I have account
+                            and remember the password, login now!</a>
+                    </div>
+                    <div class="form-group input-wrapper">
+                        <input class="anviz-btn-primary RegSubmit" type="submit" value="Send mail">
+                        <input type="hidden" name="type" value="" class="type">
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </form>
+        </div>
+    </div>
+</div>
