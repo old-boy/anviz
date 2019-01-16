@@ -19,7 +19,7 @@ body #homeBanner {
 body .banner-top-index-warp {
   height: 600px;
   width: 100%;
-  background: url(../../img/home/banner/top/home-banner-bg-football.jpg);
+  background: url(../images/home/banner/top/home-banner-bg-football.jpg);
   background-size: 100% auto !important;
   background-position: bottom center !important;
   position: relative;
