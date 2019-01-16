@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 
-const db = require('./config/key').mongoURI;
+const db = require('../db/config/key').mongoURI;
 
 const app = express();
 const port = 3000;
