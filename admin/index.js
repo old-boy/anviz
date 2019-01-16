@@ -10,6 +10,7 @@ const db = require('../db/config/key').mongoURI;
 const port = 4000;
 
 //router
+const indexRouter = require('./router/index');
 
 //connect db
 mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
@@ -20,11 +21,12 @@ app.engine('handlebars', exphbs({
 }));
 app.set('view engine', 'handlebars');
 app.set('views', __dirname + '/views');
-app.use(bodyParser.urlencoded({extended:false}))  
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public'))); //从 public 中获取静态文件
 
 //使用路由
+app.use('/index',indexRouter);
 
 app.listen(port,() => {
     console.log(`Server started on ${port}`)
