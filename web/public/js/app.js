@@ -90,6 +90,23 @@ jQuery.Class('App',
             } else {
                 return false;
             }
+        },
+        topSearch:function(){
+            var searchForm = jQuery('#topSearchForm');
+            jQuery("label button.isshow", searchForm).on('click', function () {
+                jQuery(this).parent().addClass("active");
+                jQuery("label input", searchForm).focus();
+                jQuery("label button:submit", searchForm).show();
+                jQuery(this).children('.icon-search_line').addClass('icon-black');
+            });
+
+            jQuery(".hot-search a", searchForm).click(function (e) {
+                e.preventDefault();
+                var keyword = jQuery(this).find('span').text();
+
+                jQuery('[name="keyword"]', searchForm).val(keyword);
+                searchForm.submit();
+            });
         }
     },
     {}
