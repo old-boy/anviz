@@ -21,6 +21,7 @@ const partnerRouter = require('./router/partner');
 const whereToBuyRouter = require('./router/whereToBuy');
 const industryRouter = require('./router/industry');
 const newsRouter = require('./router/news');
+const adminRouter = require('./router/admin');
 
 //connect db
 mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
@@ -45,6 +46,7 @@ app.use('/partner',partnerRouter)
 app.use('/wheretobuy',whereToBuyRouter)
 app.use('/industry',industryRouter)
 app.use('/news',newsRouter)
+app.use('/admin',adminRouter)
 
 app.listen(port,() => {
     console.log(`Server started on ${port}`)
