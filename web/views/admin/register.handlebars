@@ -1,5 +1,6 @@
 <div class="banner-top-login-bg"></div>
 <div class="container">
+    {{> _error}}
     <div class="register-main">
         <div class="row register-title">
             <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 ">
@@ -10,28 +11,28 @@
         </div>
         <div class="row register-warp">
             <h2>Account Information</h2>
-            <form action="" class="form-verify" method="post" id="RegisterFormWin">
+            <form action="/admin/register" class="form-verify" method="post" id="RegisterFormWin">
                 <div class="register-left col-md-6 col-xs-12 col-sm-12">
                     <div class="form-group">
                         <label for="email">Email *</label>
-                        <input type="email" class="input-box form-control" name="email" placeholder="User Name / Email">
+                        <input type="email" class="input-box form-control" name="email" value="{{email}}" placeholder="User Name / Email">
                     </div>
                     <div class="form-group">
                         <label for="password ">Password *</label>
-                        <input type="password" class="input-box form-control" name="password" placeholder="Password ">
+                        <input type="password" class="input-box form-control" name="password" value="{{password}}" placeholder="Password ">
                     </div>
                     <div class="form-group">
                         <label for="password ">Confirm Password *</label>
-                        <input type="password" class="input-box form-control" name="confirm_password"
+                        <input type="password" class="input-box form-control" name="confirmPassword" value="{{confirmPassword}}"
                                placeholder="Confirm Password ">
                     </div>
                     <div class="form-group">
                         <label for="password ">First Name</label>
-                        <input type="password " class="input-box form-control" name="first_name" placeholder="first name ">
+                        <input type="password " class="input-box form-control" name="firstName" value="{{firstName}}" placeholder="first name ">
                     </div>
                     <div class="form-group">
                         <label for="password ">Last Name *</label>
-                        <input type="password " class="input-box form-control" name="last_name" placeholder="last name ">
+                        <input type="password " class="input-box form-control" name="lastName" value="{{lastName}}" placeholder="last name ">
                     </div>
                 </div>
                 <div class="register-right col-md-6 col-xs-12 col-sm-12">
