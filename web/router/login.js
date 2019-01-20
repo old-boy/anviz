@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 const passport = require('passport');
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
@@ -27,12 +27,10 @@ router.get('/register',(req,res) => {
 });
 
 /**注册提交 
- * 注册时生成HASH值，并插入数据库
 */
 router.post('/register',urlencodedParser,(req,res) => {
     //验证
     
-    /*生成HASH值*/
     const newUser = new UserSchema({
         email: req.body.email,
         password:req.body.password,
@@ -53,32 +51,13 @@ router.post('/register',urlencodedParser,(req,res) => {
 });
 
 /**登录 
- * 登录时验证HASH值，并插入数据库
 */
 router.post("/login",urlencodedParser,(req,res,next) => {
-    // passport.authenticate('local', {
-    //   successRedirect:'/',
-    //   failureRedirect: '/admin/login',
-    //   failureFlash: true
-    // })(req, res, next);
-    // // 查询数据库
-    UserSchema.findOne({email:req.body.email})
-        .then((user) => {
-            console.log('user        ' + user)
-          if(!user){
-            req.flash("error_msg","用户不存在!");
-            res.redirect("/admin/login");
-            return;
-          }
-          const param = req.query || req.params;
-          const hash = bcrypt.hashSync(req.body.password, salt);
-          // 密码验证 hash为后台返回的密码
-            if(bcrypt.compareSync(req.body.password, hash)){
-                res.send("1");
-            }else{
-                res.send("0");
-            }
-        })
+    passport.authenticate('local', {
+      successRedirect:'/',
+      failureRedirect: '/admin/login',
+      failureFlash: true
+    })(req, res, next);
   });
 
 module.exports = router;
