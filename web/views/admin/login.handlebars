@@ -8,9 +8,9 @@
             </div>
         </div>
         <div class="row login-warp">
-            <form action="<?php echo Yii::app()->createUrl('login/check'); ?>" method="post" id="LoginFormWin"
+            <form action="/admin/login" method="post" id="LoginFormWin"
                   class="form-verify col-md-6 col-xs-12 col-sm-12">
-                <input type="hidden" name="return_url" value="<?php echo $return_url;?>" />
+                <input type="hidden" name="return_url" value="" />
                 <div class="form-group">
                     <label for="email">Username</label>
                     <input type="email" class="input-box form-control" name="email" placeholder="User Name / Email">
