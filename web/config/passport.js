@@ -33,6 +33,13 @@ module.exports = function(passport){
     })
   }));
 
+
+  /**下面两个方法是用来对数据进行序列化的
+   * serializeUser  将users.id序列化到session中
+   * deserializeUser  若id存在则从数据库中查询users并存储与req.users中
+   * 
+   * 此处的 users 为表名
+   */
   passport.serializeUser(function(users, done) {
     done(null, users.id);
   });

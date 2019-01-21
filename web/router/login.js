@@ -29,7 +29,8 @@ router.get('/register',(req,res) => {
     res.render('admin/register',{})
 });
 
-/**注册提交 
+/**注册提交
+ *  密码必须 bcrypt 进行加密，方便 登录 时验证密码
 */
 router.post('/register',urlencodedParser,(req,res) => {
     //验证
@@ -63,6 +64,7 @@ router.post('/register',urlencodedParser,(req,res) => {
 });
 
 /**登录 
+ * authenticate()方法有3个参数，第一是name，即验证策略的名称，第二个是options，即
 */
 router.post("/login",urlencodedParser,(req,res,next) => {
     const loginUser = {
