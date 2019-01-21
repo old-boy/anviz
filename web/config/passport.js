@@ -3,25 +3,29 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
 // Load user model
-require('../models/UserSchema');
-const User = mongoose.model('users');
+const UserSchema = require('../models/UserSchema');
+
 
 module.exports = function(passport){
   passport.use(new LocalStrategy({usernameField: 'email'}, (email, password, done) => {
+    console.log('获取的字段：' + email+'/'+ password)
     // Match user
-    User.findOne({
+    UserSchema.findOne({
       email:email
-    }).then(user => {
-      if(!user){
+    }).then(users => {
+      console.log('user存在吗？' + users)
+      if(!users){
         return done(null, false, {message: 'No User Found'});
       } 
 
       // Match password
-      bcrypt.compare(password, user.password, (err, isMatch) => {
-        console.log('password   ' + password)
+      bcrypt.compare(password, users.password, (err, isMatch) => {
+        console.log('password   ' + password);
+        console.log('user.password' + users.password);
         if(err) throw err;
         if(isMatch){
-          return done(null, user);
+          console.log('isMatch   ' + isMatch)
+          return done(null, users);
         } else {
           return done(null, false, {message: 'Password Incorrect'});
         }
@@ -29,13 +33,13 @@ module.exports = function(passport){
     })
   }));
 
-  passport.serializeUser(function(user, done) {
-    done(null, user.id);
+  passport.serializeUser(function(users, done) {
+    done(null, users.id);
   });
   
   passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      done(err, user);
+    UserSchema.findById(id, function(err, users) {
+      done(err, users);
     });
   });
 }

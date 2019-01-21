@@ -12,7 +12,7 @@ const passport = require('passport');
 const db = require('../db/config/key').mongoURI;
 
 const app = express();
-const port = 9000;
+const port = 5000;
 
 
 //router
