@@ -8,8 +8,17 @@ const flash = require("connect-flash");
 const methodOverride = require('method-override');
 const passport = require('passport');
 
-
+/**解决连接中断 
+ * auto_reconnect  自动连接
+ * poolSize 最大连接数
+*/
 const db = require('../db/config/key').mongoURI;
+const dbOption = {
+  server: {
+      auto_reconnect: true,
+      poolSize: 10
+  }
+};
 
 const app = express();
 const port = 5000;

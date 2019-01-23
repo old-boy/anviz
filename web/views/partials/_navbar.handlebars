@@ -77,14 +77,18 @@
                     </label>
                 </form>
             </li>
-            <li class="top-account-wrap login">
-              
-                
+            {{#each users}}
+
+            {{else}}
+                <li class="top-account-wrap login">
                 <a class="top-new-msg" href=""><span></span></a>
-                    <a class="top-account hidef Login" href="/admin/login" data-ajax="true"
+                <a class="top-account hidef Login" href="/admin/login" data-ajax="true"
                        data-ajax-target="#containerBody" data-ajax-progressing="top"><i class="icon-user_line"></i><span
-                                class="link-text">Account</span></a>
-            </li>
+                                class="link-text">Account</span>
+                </a>
+                </li>
+            {{/each}}
+            
         </ul>
     </div>
 </div>

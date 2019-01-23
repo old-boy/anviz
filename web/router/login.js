@@ -7,7 +7,7 @@ const passport = require('passport');
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const salt = bcrypt.genSaltSync(10); //加密强度
-const secretName = require('../../db/config/key').secretName;
+
 
 // Passport Config
 // require('../config/')(passport);
@@ -97,5 +97,10 @@ router.post("/login",urlencodedParser,(req,res,next) => {
     //     })
     //   })
   });
+
+  /**查询用户 */
+  router.get('/users',(req,res) => {
+
+  })
 
 module.exports = router;

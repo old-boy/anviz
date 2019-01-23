@@ -1,6 +1,8 @@
 const LocalStrategy  = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const secretKey = require('../../db/config/key').secretName;
 
 // Load user model
 const UserSchema = require('../models/UserSchema');
@@ -25,6 +27,21 @@ module.exports = function(passport){
         if(err) throw err;
         if(isMatch){
           console.log('isMatch   ' + isMatch)
+          //登录成功，返回 token
+          const rule = {
+              id: users._id,
+              email:users.email,
+              admin:'true'
+          };
+
+          jwt.sign(rule,secretKey,{expiresIn:3600},(err,token) => {
+            if(err) throw err;
+            const tokenKey = {
+              sucess:true,
+              token:"Bearer " + token
+            };
+            console.log('token         ' + res.json(tokenKey))
+          });
           return done(null, users);
         } else {
           return done(null, false, {message: 'Password Incorrect'});
