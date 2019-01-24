@@ -12,7 +12,7 @@ router.get('/',(req,res) => {
   });
   
   router.get('/forgot',(req,res) => {
-      res.render('admin/forgotPsd',{})
+      res.render('admin/forgot',{})
   });
   
   router.get('/register',(req,res) => {
