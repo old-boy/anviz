@@ -22,6 +22,9 @@ const UserSchema = new Schema({
             type:String,
             default:true
       },
+      onLine:{
+            type:String
+      },
       date:{
             type:Date,
             default:Date.now
