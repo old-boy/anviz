@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 
-router.get('/',(req,res) => {
+router.get('',(req,res) => {
     res.render('index/index',{})
 });
 

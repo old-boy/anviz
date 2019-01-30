@@ -3,7 +3,7 @@ const exphbs  = require('express-handlebars');
 const path = require("path");
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
-const session = require('express-session')
+const session = require('express-session');
 const flash = require("connect-flash");
 const methodOverride = require('method-override');
 const passport = require('passport');
@@ -12,6 +12,10 @@ const db = require('../db/config/key').mongoURI;
 
 const app = express();
 const port = 4000;
+const identityKey = 'skey';
+
+// Passport 验证策略，passport 验证依赖
+require('./config/passport')(passport);
 
 //router
 const indexRouter = require('./router/index');
@@ -30,14 +34,24 @@ app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public'))); //从 public 中获取静态文件
 app.use(methodOverride('_method'));
+/**session 配置 
+ * secret  用来对session id相关的cookie进行签名
+ * saveUninitialized   是否自动保存未初始化的会话，建议false
+ * resave  是否每次都重新保存会话，建议false
+ * maxAge  有效期，单位是毫秒
+*/
 app.use(session({
-  secret: 'secret',
-  resave: true,
-  saveUninitialized: true,
+    secret: 'chyingp',
+    saveUninitialized: false,
+    resave: false,
+    cookie: {
+        maxAge: 10 * 1000
+    }
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+
 
 //使用路由
 app.use('/admin',loginRouter)

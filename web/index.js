@@ -36,7 +36,7 @@ const industryRouter = require('./router/industry');
 const newsRouter = require('./router/news');
 const loginRouter = require('./router/login');
 
-// Passport Config
+// Passport 验证策略，passport 验证依赖
 require('./config/passport')(passport);
 
 //connect db

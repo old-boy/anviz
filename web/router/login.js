@@ -8,10 +8,6 @@ const passport = require('passport');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 const salt = bcrypt.genSaltSync(10); //加密强度
 
-
-// Passport Config
-// require('../config/')(passport);
-
 //Schema
 require('../models/UserSchema');
 const UserSchema = mongoose.model('users');//实例化
