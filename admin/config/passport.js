@@ -1,8 +1,9 @@
 const LocalStrategy  = require('passport-local').Strategy;
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
+const flash = require("connect-flash");
 const jwt = require('jsonwebtoken');
-const secretKey = require('../../db/config/key').secretName;
+const secretName = require('../../db/config/key').secretName;
 
 // Load user model
 const UserSchema = require('../models/UserSchema');
@@ -26,6 +27,21 @@ module.exports = function(passport){
         if(err) throw err;
         if(isMatch){
           console.log('isMatch   ' + isMatch)
+
+          const rule = {
+            id: users._id,
+            name:users.userName,
+            password:users.password
+          };
+
+          jwt.sign(rule,secretName,{expiresIn:3600},(err,token) => {
+              if(err) throw err;
+              res.json({
+                  sucess:true,
+                  token:"Bearer " + token
+              });
+          })
+
           return done(null, users);
         } else {
           return done(null, false, {message: 'Password 无效'});
@@ -34,13 +50,6 @@ module.exports = function(passport){
     })
   }));
 
-
-  /**下面两个方法是用来对数据进行序列化的
-   * serializeUser  将users.id序列化到session中
-   * deserializeUser  若id存在则从数据库中查询users并存储与req.users中
-   * 
-   * 此处的 users 为表名
-   */
   passport.serializeUser(function(users, done) {
     done(null, users.id);
   });

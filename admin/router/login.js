@@ -27,13 +27,14 @@ const UserSchema = mongoose.model('users');//实例化
   /**POST users
    * 登录 POST /
    * 注册 POST /register
+   * 退出 POST /signOut
   */
 
 router.post('/register',urlencodedParser,(req,res) => {
     const entity = req.body;
     const userEntity = UserSchema(entity);
-
     console.log('newUser      ' + userEntity)
+
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(userEntity.password, salt, (err, hash) => {
             if(err) throw err;
@@ -58,7 +59,6 @@ router.post("/login",urlencodedParser,(req,res,next) => {
         password:req.body.password
     };
 
-    console.log(loginUser);
     passport.authenticate('local', {
       successRedirect:'/index',
       failureRedirect: '/admin',
@@ -83,5 +83,12 @@ router.post("/login",urlencodedParser,(req,res,next) => {
     //     })
     //   })
   });
+
+  router.post('/signOut',(req,res) => {
+    req.session.user = null;
+    req.session.error = null;
+    res.redirect('/admin/login');
+  })
+
 
 module.exports = router;

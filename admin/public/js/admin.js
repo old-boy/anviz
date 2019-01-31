@@ -20,4 +20,5 @@ jQuery.Class('Admin',
             increaseArea: '20%'
         });
     }
-},{})
+    
+},{});

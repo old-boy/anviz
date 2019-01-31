@@ -4,6 +4,8 @@ const path = require("path");
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const FileStore = require('session-file-store')(session);
 const flash = require("connect-flash");
 const methodOverride = require('method-override');
 const passport = require('passport');
@@ -41,13 +43,15 @@ app.use(methodOverride('_method'));
  * maxAge  有效期，单位是毫秒
 */
 app.use(session({
-    secret: 'chyingp',
+    secret: 'Bearer',
     saveUninitialized: false,
+    store: new FileStore(),//本地储存 session
     resave: false,
     cookie: {
-        maxAge: 10 * 1000
+        maxAge: 10 * 1000  // 有效期，单位是毫秒
     }
 }));
+app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
