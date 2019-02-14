@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5c50fc35bb8173379cbb7a6e"},"isChecked":"true","fullName":"kevin.chen","email":"kevin.chen@anviz.com","password":"$2b$10$etiDXLHHwrLy7.sU4kC6SeAkgcB7uNzjsCShWRi63ik4BkY/e/7GC","date":{"$date":"2019-01-30T01:21:57.589Z"}}
+{"_id":{"$oid":"5c50fd2d5ecdd4375c5aa635"},"isChecked":"true","fullName":"honglin","email":"lin.hong@anviz.com","password":"$2b$10$L6ZbZLwaa7ky/oIMLg9rPOrcmZcg9DPUVpR8FAVOEQ0bYBlzDkFf2","date":{"$date":"2019-01-30T01:26:05.105Z"}}
+{"_id":{"$oid":"5c50fd8ae048352814fc1b24"},"isChecked":"true","fullName":"even","email":"even@anviz.com","password":"$2b$10$DMXS2n85DnR0kof5eNq9s.A9UfGsHxUxxlXW4jLQWKDEtHSDM8hwe","date":{"$date":"2019-01-30T01:27:38.255Z"}}
+{"_id":{"$oid":"5c515f029e947b360c858759"},"isChecked":"true","fullName":"9988","email":"99@anviz.com","password":"$2b$10$WOkijVsqeszveD59dTyBzeLGvl0EPyO/55NjBZQqlfhwdbf3.vVvG","date":{"$date":"2019-01-30T08:23:30.321Z"}}
