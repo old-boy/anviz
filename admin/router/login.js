@@ -58,12 +58,20 @@ router.post("/login",urlencodedParser,(req,res,next) => {
         email:req.body.email,
         password:req.body.password
     };
+    
+    UserSchema.findOne({
+        email:loginUser.email
+      }).then(users => {
+        //保存当前登录用户信息，在跳转到index时会查询当前用户是否存在
+        req.session.users=users;
+      });
 
     passport.authenticate('local', {
       successRedirect:'/index',
       failureRedirect: '/admin',
       failureFlash: true
     })(req, res, next);
+
 
     // UserSchema.findOne({
     //     email:loginUser.email

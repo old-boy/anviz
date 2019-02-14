@@ -1,0 +1,4 @@
+@charset 'utf-8';
+.online::before {
+  color: #00ffff;
+}

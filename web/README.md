@@ -14,10 +14,15 @@ npm i express-handlebars
  }
  
 ### 配置 handlebars
-handlebars 同 php 的结构类似，根据官方文档提示，基本结构为：
-.
-.
-├── app.js
+handlebars 结构，根据官方文档提示，基本结构为：
+
+
+admin
+│
+db
+│
+web
+├── index.js
 ├── node_modules
 │   ├── express
 │   ├── handlebars
@@ -27,16 +32,13 @@ handlebars 同 php 的结构类似，根据官方文档提示，基本结构为�
 │   └── request
 ├── package.json
 ├── public
-│   ├── images
-│   ├── javascripts
+│   ├── img
+│   ├── js
 │   │   └── app.js
-│   ├── lib
+│   ├── font
 │   │   ├── font
-│   │   ├── js
-│   │   └── stylesheets
-│   └── stylesheets
-│       ├── style.css
-│       └── style.less
+│   └── scss
+│       └── style.scss
 ├── routes
 │   ├── github.js
 │   └── index.js
