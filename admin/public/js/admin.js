@@ -19,6 +19,8 @@ jQuery.Class('Admin',
             radioClass: 'iradio_square-blue',
             increaseArea: '20%'
         });
+    },
+    select2:function(){
+        $('.select2').select2();
     }
-    
 },{});

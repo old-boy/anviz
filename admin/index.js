@@ -22,6 +22,7 @@ require('./config/passport')(passport);
 //router
 const indexRouter = require('./router/index');
 const loginRouter = require('./router/login');
+const productRouter = require('./router/product');
 
 //connect db
 mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
@@ -60,6 +61,7 @@ app.use(flash());
 //使用路由
 app.use('/admin',loginRouter)
 app.use('/index',indexRouter)
+app.use('/product',productRouter)
 
 app.listen(port,() => {
     console.log(`Server started on ${port}`)
