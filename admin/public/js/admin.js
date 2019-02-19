@@ -24,3 +24,5 @@ jQuery.Class('Admin',
         $('.select2').select2();
     }
 },{});
+
+

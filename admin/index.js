@@ -10,6 +10,7 @@ const flash = require("connect-flash");
 const methodOverride = require('method-override');
 const passport = require('passport');
 
+
 const db = require('../db/config/key').mongoURI;
 
 const app = express();
@@ -23,6 +24,7 @@ require('./config/passport')(passport);
 const indexRouter = require('./router/index');
 const loginRouter = require('./router/login');
 const productRouter = require('./router/product');
+const userRouter = require('./router/users');
 
 //connect db
 mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
@@ -62,6 +64,7 @@ app.use(flash());
 app.use('/admin',loginRouter)
 app.use('/index',indexRouter)
 app.use('/product',productRouter)
+app.use('/user',userRouter)
 
 app.listen(port,() => {
     console.log(`Server started on ${port}`)

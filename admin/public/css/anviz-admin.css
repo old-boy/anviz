@@ -2,3 +2,22 @@
 .online::before {
   color: #00ffff;
 }
+.active a b {
+  color: azure;
+  padding-left: 10px;
+}
+.active a i {
+  color: azure;
+}
+.login-box,
+.register-box {
+  margin: 0 auto;
+  padding-top: 10%;
+}
+.select2-container .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 34px;
+}
+.users-table {
+  margin: 0 auto;
+}
