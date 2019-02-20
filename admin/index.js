@@ -27,7 +27,14 @@ const productRouter = require('./router/product');
 const userRouter = require('./router/users');
 
 //connect db
-mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
+// mongoose.connect(db,{ useNewUrlParser: true }).then( () => console.log('DB Successful！')).catch((err) => console.log(err));
+mongoose.connect(db,{ useNewUrlParser: true })
+        .then(() => {
+          console.log("DB Successful!");
+        })
+        .catch(err => {
+          console.log(err);
+        })
 
 //中间件
 app.engine('handlebars', exphbs({
@@ -58,6 +65,14 @@ app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+// 配置全局变量
+app.use((req,res,next) => {
+    res.locals.success_msg = req.flash('success_msg');
+    res.locals.error_msg = req.flash('error_msg');
+    res.locals.user = req.user || null;
+    next();
+});
+
 
 
 //使用路由

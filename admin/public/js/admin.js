@@ -22,6 +22,17 @@ jQuery.Class('Admin',
     },
     select2:function(){
         $('.select2').select2();
+    },
+    secondCateogoryName(){
+        var cateogoryId = $(this).children().attr('data-id');
+        const url = '../../config/url.js'.url;
+        $.ajax({
+            url:url + cateogoryId,
+            dataType:'json',
+            success:function(data){
+                $('.cateogory-2-body strong').text(data.cateogoryName)
+            }
+        })
     }
 },{});
 

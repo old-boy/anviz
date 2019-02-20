@@ -9,6 +9,9 @@
 .active a i {
   color: azure;
 }
+.list-group-item {
+  cursor: pointer;
+}
 .login-box,
 .register-box {
   margin: 0 auto;

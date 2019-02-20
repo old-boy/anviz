@@ -6,7 +6,6 @@ const ProductCateogorySchema = new Schema({
             type:Schema.Types.ObjectId,
             ref:"users"
       },
-      product:[],
       cateogoryName:{
             type:String,
             required:true
@@ -14,8 +13,6 @@ const ProductCateogorySchema = new Schema({
       cateogoryDes:{
             type:String
       },
-      subTwoCateogory:[],
-      subThreeCateogory:[],
       date:{
             type:Date,
             default:Date.now

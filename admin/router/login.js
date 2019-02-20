@@ -92,10 +92,12 @@ router.post("/login",urlencodedParser,(req,res,next) => {
     //   })
   });
 
-  router.post('/signOut',(req,res) => {
+  router.get('/signOut',(req,res) => {
+    req.logout();
+    req.flash('success_msg', '退出登录成功');
     req.session.user = null;
     req.session.error = null;
-    res.redirect('/admin/login');
+    res.redirect('/admin');
   })
 
 

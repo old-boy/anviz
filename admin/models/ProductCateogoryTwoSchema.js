@@ -2,26 +2,22 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ProductCateogoryTwoSchema = new Schema({
-      cateogory:{
+      parentCateogoryId:{
             type:Schema.Types.ObjectId,
-            ref:"cateogoryOne"//与 cateogoryOne 表进行关联，获取它的ID
+            ref:"cateogories",
+            required:true
       },
-      handle:{
+      parentCateogoryName:{
+            type:String
+      },
+      subCateogoryName:{
             type:String,
             required:true
       },
-      cateogoryTwoName:[
-            {
-                  cateogoryName:{
-                        type:String,
-                        required:true
-                  }
-            }
-      ],
       date:{
             type:Date,
             default:Date.now
       }
 });
 
-module.exports = mongoose.model('cateogoryTwo',ProductCateogoryTwoSchema);
+module.exports = mongoose.model('twoCateogories',ProductCateogoryTwoSchema);

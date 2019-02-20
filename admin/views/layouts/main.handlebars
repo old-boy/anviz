@@ -33,6 +33,7 @@
     </aside>
     <div class="content-wrapper">
         {{!-- 公共部分 body --}}
+        {{> msg}}
         {{{body}}}
     </div>
 </div>
@@ -49,6 +50,9 @@
     Admin.sidebarNavShow();
     Admin.clickICheck();
     Admin.select2();
+    $('.list-group .cateogory-1-item').on('click',function(){
+        Admin.secondCateogoryName();
+    })
 </script>
 </body>
 </html>
