@@ -107,6 +107,22 @@ jQuery.Class('App',
                 jQuery('[name="keyword"]', searchForm).val(keyword);
                 searchForm.submit();
             });
+        },
+        crossChexTab:function(){
+            jQuery('.cross-chex-tab .tab-header-item').click(function (e) {
+                
+                var _this = jQuery(this);
+                var index = _this.index();
+
+                _this.addClass('active').siblings().removeClass('active');
+                jQuery('.cross-chex-pannel .tab-content').eq(index).addClass('active').siblings().removeClass('active');
+            });
+        },
+        featureNav:function(){
+            jQuery('.feature-nav-content ul li a').on(App.linkAfterAjax, function (e) {
+                jQuery('.feature-nav-content ul li a.nav-btn-active').removeClass('nav-btn-active');
+                jQuery(this).addClass('nav-btn-active');
+            });
         }
     },
     {}

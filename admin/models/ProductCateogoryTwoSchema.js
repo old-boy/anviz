@@ -7,13 +7,17 @@ const ProductCateogoryTwoSchema = new Schema({
             ref:"cateogories",
             required:true
       },
-      parentCateogoryName:{
-            type:String
-      },
-      subCateogoryName:{
-            type:String,
-            required:true
-      },
+      children:[
+            {
+                  parentCateogoryName:{
+                        type:String
+                  },
+                  cateogoryName:{
+                        type:String,
+                        required:true
+                  }
+            }
+      ],
       date:{
             type:Date,
             default:Date.now

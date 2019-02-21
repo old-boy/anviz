@@ -12676,3 +12676,10 @@ body .header-bg {
   font-weight: 200;
   vertical-align: inherit;
 }
+/*20190221*/
+.cross-chex-pannel .tab-content {
+  display: none;
+}
+.cross-chex-pannel .active {
+  display: block;
+}
